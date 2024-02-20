@@ -6,6 +6,8 @@
 {%import "_macros.html" as macros%}
     <h1>Alumnos</h1>
     <form action="" method="POST">
+        {{form.csrf_token}}
+        <input type="hidden" name="csrf" value="{{csrf_token}}"/>
         {{macros.input_Form(form.nombre, class="form-control")}}
         {{macros.input_Form(form.email, class="form-control")}}
         {{macros.input_Form(form.apaterno, class="form-control")}}
